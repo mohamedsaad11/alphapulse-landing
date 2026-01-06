@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlphaPulse AI - Professional Institutional Crypto Signals</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+body {
+font-family: 'Inter', sans-serif;
+background-color: #0f172a;
+color: #f8fafc;
+}
+.hero-gradient {
+background: radial-gradient(circle at top right, #1e293b, #0f172a);
+}
+.accent-glow {
+text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+.card-blur {
+background: rgba(30, 41, 59, 0.7);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.1);
+}
+.pulse {
+animation: pulse 2s infinite;
+}
+@keyframes pulse {
+0% { opacity: 1; }
+50% { opacity: 0.5; }
+100% { opacity: 1; }
+}
+img.placeholder-img {
+background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+min-height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #64748b;
+}
+.social-icons a {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+background: rgba(255,255,255,0.05);
+color: #cbd5e1;
+margin: 0 6px;
+transition: all 0.3s;
+}
+.social-icons a:hover {
+background: #1e40af;
+color: white;
+transform: translateY(-2px);
+}
+</style>
+</head>
+<body class="overflow-x-hidden">
+<!-- Live Notification -->
+<div id="live-notification" class="fixed top-4 right-4 z-50 transform translate-x-full transition-transform duration-500 card-blur p-4 rounded-lg shadow-2xl flex items-center space-x-3">
+<div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+<p class="text-sm font-medium" id="notif-text">New user joined from London</p>
+</div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-40 bg-[#0f172a] border-b border-white/5 px-6 py-2">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center">
+<div class="relative">
+<img src="images/logo.png" alt="AlphaPulse Logo" class="h-24 w-auto object-contain mix-blend-lighten brightness-110 contrast-110 -my-4" onerror="this.style.display='none'">
+<div class="h-12 text-2xl font-bold text-blue-500" style="display:none;">AlphaPulse AI</div>
+</div>
+</div>
+<div class="hidden md:flex space-x-12 text-lg font-semibold text-slate-300">
+<a href="#" class="hover:text-white transition">Home</a>
+<a href="#features" class="hover:text-white transition">Features</a>
+<a href="#subscribe" class="hover:text-white transition">Pricing</a>
+<a href="#faq" class="hover:text-white transition">FAQ</a>
+</div>
+<a href="#subscribe" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-3 rounded-2xl text-lg font-bold transition-all transform hover:scale-105 shadow-2xl shadow-blue-500/30">
+Get Access
+</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="hero-gradient min-h-screen flex flex-col items-center justify-center px-4 pt-28 sm:pt-20 relative">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<div class="z-10 text-center max-w-4xl">
+<div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 px-4 py-1 rounded-full text-blue-400 text-sm font-semibold mb-6">
+<i class="fas fa-certificate"></i>
+<span>Verified Performance Since Oct 18, 2025</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold mb-6 accent-glow leading-tight">
+AlphaPulse AI: <span class="text-blue-500">84% Win Rate</span> Institutional Signals
+</h1>
+<p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+Stop guessing. Start winning. Our AI fusions deliver high-precision crypto alerts directly to your Telegram. No more getting stopped out.
+</p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
+<a href="#subscribe" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/20">
+7-Day Trial: $7 in USDT
+</a>
+<div class="flex items-center justify-center space-x-3 text-slate-400">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/150?u=1" alt="User">
+<img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/150?u=2" alt="User">
+<img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/150?u=3" alt="User">
+</div>
+<span class="text-sm"><span class="font-bold text-white" id="user-count">1,248</span> traders active now</span>
+</div>
+</div>
+
+<!-- ✅ VIDEO SECTION — MOVED TO TOP & FULLY OPTIMIZED -->
+<div class="mt-20 max-w-4xl mx-auto px-4">
+  <div class="card-blur rounded-3xl p-6 border-blue-500/20">
+    <div class="relative aspect-[9/16] rounded-2xl overflow-hidden bg-slate-900 flex items-center justify-center group cursor-pointer" id="video-container">
+      <video 
+        id="promo-video" 
+        class="w-full h-full object-contain bg-slate-900"
+        controls 
+        preload="metadata"
+        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1080' height='1920'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' font-family='Inter, sans-serif' font-size='32' fill='%23ffffff' text-anchor='middle' dominant-baseline='middle'%3EAlphaPulse AI%3C/text%3E%3C/svg%3E"
+        style="display: none;"
+      >
+        <source src="images/promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 flex items-center justify-center" id="play-btn-container">
+        <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50 transform group-hover:scale-110 transition-transform cursor-pointer" onclick="playVideo()">
+          <i class="fas fa-play text-2xl text-white ml-1"></i>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 text-center">
+      <h3 class="text-xl font-bold">The Story Behind AlphaPulse AI</h3>
+      <p class="text-slate-400 mt-2">I lost $27K in 3 months — so I built an AI that only trades when exhaustion is confirmed. 83% win rate. Zero false signals.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Screenshots Carousel -->
+<div class="mt-20 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+<div class="card-blur rounded-2xl p-2 transform hover:-translate-y-2 transition-transform">
+<img src="images/signal1.png" class="rounded-xl w-full" alt="Signal Success" onerror="this.parentElement.innerHTML='<div class=\'w-full h-32 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400\'>Signal Screenshot 1</div>'">
+</div>
+<div class="card-blur rounded-2xl p-2 transform hover:-translate-y-2 transition-transform">
+<img src="images/chart1.png" class="rounded-xl w-full" alt="Technical Analysis" onerror="this.parentElement.innerHTML='<div class=\'w-full h-32 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400\'>Chart Analysis 1</div>'">
+</div>
+<div class="card-blur rounded-2xl p-2 transform hover:-translate-y-2 transition-transform">
+<img src="images/signal2.png" class="rounded-xl w-full" alt="Signal Alert" onerror="this.parentElement.innerHTML='<div class=\'w-full h-32 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400\'>Signal Screenshot 2</div>'">
+</div>
+<div class="card-blur rounded-2xl p-2 transform hover:-translate-y-2 transition-transform">
+<img src="images/chart2.png" class="rounded-xl w-full" alt="Execution" onerror="this.parentElement.innerHTML='<div class=\'w-full h-32 bg-slate-800 rounded-xl flex items-center justify-center text-slate-400\'>Chart Analysis 2</div>'">
+</div>
+</div>
+<!-- Proof of Integrity -->
+<div class="mt-32 max-w-6xl mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Institutional Integrity & Transparency</h2>
+<p class="text-slate-400">Direct access to our backend logs showing the AI fusion system in real-time. No mock data, just pure institutional logic.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="card-blur rounded-2xl overflow-hidden group">
+<img src="images/bot_log1.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" alt="Backend Audit 1" onerror="this.parentElement.innerHTML='<div class=\'w-full h-48 bg-slate-800 flex items-center justify-center text-slate-400\'>Backend Audit Log 1</div>'">
+<div class="p-6">
+<h4 class="font-bold mb-2">Multi-Exchange Fetching</h4>
+<p class="text-sm text-slate-400">Aggregating order books from 5+ top-tier exchanges simultaneously.</p>
+</div>
+</div>
+<div class="card-blur rounded-2xl overflow-hidden group">
+<img src="images/bot_log2.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" alt="Backend Audit 2" onerror="this.parentElement.innerHTML='<div class=\'w-full h-48 bg-slate-800 flex items-center justify-center text-slate-400\'>Backend Audit Log 2</div>'">
+<div class="p-6">
+<h4 class="font-bold mb-2">Strategy Fusion Validation</h4>
+<p class="text-sm text-slate-400">12 AI models validating a single entry point for maximum confluence.</p>
+</div>
+</div>
+<div class="card-blur rounded-2xl overflow-hidden group">
+<img src="images/bot_log3.png" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" alt="Backend Audit 3" onerror="this.parentElement.innerHTML='<div class=\'w-full h-48 bg-slate-800 flex items-center justify-center text-slate-400\'>Backend Audit Log 3</div>'">
+<div class="p-6">
+<h4 class="font-bold mb-2">Live Signal Lifecycle</h4>
+<p class="text-sm text-slate-400">Continuous 24/7 price tracking with microsecond accuracy for TP/SL hits.</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Features Section -->
+<section id="features" class="py-24 px-4 bg-slate-950">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-16">Why Professional Traders Choose AlphaPulse</h2>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500">
+<i class="fas fa-bolt text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold">84% Verified Win Rate</h3>
+<p class="text-slate-400">Based on real-time market exhaustion monitoring. Our signals pass 12 distinct quality gates before reaching you.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500">
+<i class="fas fa-shield-halved text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold">Stop Loss Never Hit</h3>
+<p class="text-slate-400">Precision entries at peak exhaustion zones. We don't just trade trends; we trade high-confidence reversals.</p>
+</div>
+<div class="space-y-4">
+<div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-500">
+<i class="fas fa-brain text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold">12 AI Strategy Fusion</h3>
+<p class="text-slate-400">Collective intelligence from 12 specialized AI models ensuring multi-confluence before every alert.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription Section -->
+<section id="subscribe" class="py-24 px-4 relative overflow-hidden">
+<div class="max-w-xl mx-auto card-blur rounded-3xl p-10 relative z-10 border-blue-500/30">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">LIMITED SLOTS</span>
+</div>
+<h2 class="text-3xl font-bold mb-2">Institutional Access</h2>
+<p class="text-slate-400 mb-8">Join the elite circle of AlphaPulse traders today.</p>
+<div class="bg-slate-900/50 rounded-2xl p-6 mb-8 border border-slate-800">
+<div class="flex justify-between items-center mb-4">
+<span class="text-slate-400">7-Day Trial Fee</span>
+<span class="text-2xl font-bold">7 USDT <span class="text-sm font-normal text-slate-500">/ 7 Days</span></span>
+</div>
+<div class="space-y-4 pt-4 border-t border-slate-800">
+<div>
+<p class="text-xs text-slate-500 mb-1">USDT (TRC20) WALLET ADDRESS</p>
+<div class="flex items-center bg-black/50 p-3 rounded-lg border border-slate-700">
+<code class="text-blue-400 break-all text-sm" id="wallet-addr">TQa8X1fjF2f4eD8z9A5b7C3d1E9f0G1h2I3j4K</code>
+<button onclick="copyWallet()" class="ml-2 text-slate-400 hover:text-white flex-shrink-0">
+<i class="fas fa-copy"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-sm text-center text-slate-400">After payment, send your transaction screenshot to:</p>
+<a href="https://t.me/Msnofa" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-[#229ED9] hover:bg-[#1e8cb3] text-white py-4 rounded-xl font-bold transition-all">
+<i class="fab fa-telegram"></i>
+<span>Submit Screenshot on Telegram</span>
+</a>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 px-4 bg-slate-950/50" id="faq">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div class="card-blur p-6 rounded-2xl">
+<h4 class="font-bold mb-2">Is there a free trial?</h4>
+<p class="text-slate-400">No, but the $7 trial gives you full institutional access for 7 days with zero risk to your long-term capital.</p>
+</div>
+<div class="card-blur p-6 rounded-2xl">
+<h4 class="font-bold mb-2">Are results verified?</h4>
+<p class="text-slate-400">Yes. Every stat shown is derived from actual signals dispatched to our users since October 18, 2025.</p>
+</div>
+<div class="card-blur p-6 rounded-2xl">
+<h4 class="font-bold mb-2">Is it suitable for beginners?</h4>
+<p class="text-slate-400">Absolutely. Every signal includes Entry Price, Take Profit 1/2/3, and Stop Loss. Just copy and execute.</p>
+</div>
+<div class="card-blur p-6 rounded-2xl">
+<h4 class="font-bold mb-2">Is there a whitepaper or technical documentation?</h4>
+<p class="text-slate-400">A technical whitepaper is available upon request for institutional partners and serious developers. Contact us via Telegram for access.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="py-8 text-center text-slate-500 text-sm">
+<div class="mb-4">
+<div class="social-icons">
+<a href="https://x.com/AlphaPulseAI" target="_blank" title="X (Twitter)"><i class="fab fa-x"></i></a>
+<a href="https://t.me/Msnofa" target="_blank" title="Telegram Channel"><i class="fab fa-telegram"></i></a>
+</div>
+</div>
+<p>&copy; 2025 AlphaPulse AI. Institutional Grade Trading Intelligence.</p>
+</footer>
+<script>
+function playVideo() {
+  const video = document.getElementById('promo-video');
+  const playBtn = document.getElementById('play-btn-container');
+  video.style.display = 'block';
+  playBtn.style.display = 'none';
+  video.play().catch(e => {
+    console.warn('Playback blocked by browser. User must interact directly.');
+  });
+}
+function copyWallet() {
+  const addr = document.getElementById('wallet-addr').innerText;
+  navigator.clipboard.writeText(addr).then(() => {
+    alert('✅ Wallet address copied to clipboard!');
+  }).catch(() => {
+    alert('Please copy manually: ' + addr);
+  });
+}
+let count = 1248;
+setInterval(() => {
+  count += Math.floor(Math.random() * 3);
+  document.getElementById('user-count').innerText = count.toLocaleString();
+}, 5000);
+const locations = ['New York', 'Dubai', 'Singapore', 'London', 'Berlin', 'Tokyo', 'Seoul', 'Toronto', 'Sydney'];
+const notif = document.getElementById('live-notification');
+const notifText = document.getElementById('notif-text');
+function showNotification() {
+  const loc = locations[Math.floor(Math.random() * locations.length)];
+  notifText.innerText = `New user joined from ${loc}`;
+  notif.classList.remove('translate-x-full');
+  setTimeout(() => {
+    notif.classList.add('translate-x-full');
+  }, 4000);
+}
+setInterval(() => {
+  if (Math.random() > 0.7) showNotification();
+}, 10000);
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href && href !== '#') {
+      e.preventDefault();
+      document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
